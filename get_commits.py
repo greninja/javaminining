@@ -1,8 +1,12 @@
 import subprocess
 import re
+import os
 
 leading_4_spaces = re.compile('^    ')
 encoding = 'utf-8'
+
+url1 = "https://github.com/greninja/NPLM.git"
+dir1 = "NPLM"
 
 def get_commits():
     lines = subprocess.check_output(
@@ -40,4 +44,7 @@ def get_commits():
     if current_commit:
         save_current_commit()
     return commits
-get_commits()
+
+os.system("git clone "+url1)
+os.chdir(dir1)
+commits = get_commits()
