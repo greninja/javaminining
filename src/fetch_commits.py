@@ -1,21 +1,11 @@
 # TODO List:
-# (7) write README.md
-# (2) Check all corner cases; if any     NOT DONE
-# (6) create a requirements.txt file for installation - NOT DONE
-# (4) scrap online github commit or from local git repo? NOT DONE
+# (2) Check all corner cases; if any   NOT DONE
+# branch commits?
 
 import os
 from pydriller import RepositoryMining
 from arguments import parser
 from generate_csv import csv_report
-
-# def get_repo_path(url):
-#     repodir = url.split("/")[-1].split(".")[0]
-#     if not os.path.exists(repodir):
-#         os.system("git clone "+url)
-#     pwd = os.getcwd()
-#     repo_path = os.path.join(pwd, repodir)
-#     return repo_path
 
 def get_modified_files(commit, file_extension):
     """
@@ -26,7 +16,7 @@ def get_modified_files(commit, file_extension):
 
 def function_signature(method, params_dict):
     """
-    """    
+    """
     return params_dict[method.name][1]         
 
 def fetch(commit, modified_files, existing_methods):
@@ -77,7 +67,7 @@ def get_commits_in_CSV(args):
         # in the current commit
         modified_files = get_modified_files(commit, file_extension)
         
-        # fetch methods with updated set of parameters and data to 
+        # fetch methods with updated set of parameters and data to
         # add to a csv file (if new function parameters were added)
         current_methods, data_to_add = fetch(commit, 
                                              modified_files,
@@ -91,9 +81,7 @@ def get_commits_in_CSV(args):
             csv_data.append(d)
     
     # generate csv report
-    csv_file = repo_path.split("/")[-1]+'.csv'
-    csv_file = os.path.join(os.getcwd(), 'csv_reports', csv_file)
-    csv_report(csv_file, csv_data)
+    csv_report(repo_path, csv_data)
 
 if __name__=="__main__":
     args = parser.parse_args()      
