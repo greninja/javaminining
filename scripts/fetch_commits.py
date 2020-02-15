@@ -1,7 +1,3 @@
-# TODO List:
-# (2) Check all corner cases; if any   NOT DONE
-# branch commits?
-
 import os
 from pydriller import RepositoryMining
 from arguments import parser

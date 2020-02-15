@@ -29,14 +29,12 @@ python3 src/fetch_commits.py --repo_path /home/shadab/sample-code-java --file_ex
 ```
 or using remote url:
 ```
-python3 src/fetch_commits.py --repo_path https://github.com/AuthorizeNet/sample-code-java --file_extension .java
+python3 src/fetch_commits.py --repo_path https://github.com/socketio/socket.io-client-java --file_extension .java
 ```
-
-Eventually, there'll be a CSV file with same filename as that of the git repo.
 
 # Two Java repositories considered: 
 
 1) https://github.com/AuthorizeNet/sample-code-java : CSV report is in 'csv_reports/sample-code-java.csv'
-2) https://github.com/socketio/socket.io-client-java : CSV report is in 'csv_reports/socket.io-client-java.csv'
+2) https://github.com/socketio/socket.io-client-java : CSV report is in 'csv_reports/socket.csv'
 
 Note: Preferably use Libreoffice Calc or any other spreadsheet software to view the csv better.
