@@ -19,22 +19,29 @@ The main script used to retrieve the commits is `scripts/fetch_commits.py`. It r
 
 Template of the command to run `fetch_commits.py`:
 ```
-python3 scripts/fetch_commits.py --repo_path /local path or remote url/to/git/repo --file_extension .java/.py
+python3 scripts/fetch_commits.py \
+--repo_path /local path or remote url/to/git/repo \
+--file_extension <file_extension>
 ```
 
 Specific instance using absolute local path:
 ```
-python3 scripts/fetch_commits.py --repo_path /home/shadab/sample-code-java --file_extension .java
+python3 scripts/fetch_commits.py \
+--repo_path /home/shadab/sample-code-java \
+--file_extension .java
 ```
 Specific instance using remote url:
 ```
-python3 scripts/fetch_commits.py --repo_path https://github.com/socketio/socket.io-client-java --file_extension .java
+python3 scripts/fetch_commits.py \
+--repo_path https://github.com/socketio/socket.io-client-java \
+--file_extension .java
 ```
 
 Please note you can also pass multiple file extensions at the same time with a comma seperated list. The script will fetch commits for all those file types. Eg:
-Specific instance using remote url:
 ```
-python3 scripts/fetch_commits.py --repo_path https://github.com/socketio/socket.io-client-java --file_extension .java,.py
+python3 scripts/fetch_commits.py \
+--repo_path https://github.com/socketio/socket.io-client-java \
+--file_extension .java,.py
 ```
 
 The generated CSV file will be stored in `csv_reports/` and it's name will be the name of the git repository itself or a substring of it.
