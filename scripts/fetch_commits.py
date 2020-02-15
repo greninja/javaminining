@@ -6,18 +6,22 @@ from generate_csv import csv_report
 def get_modified_files(commit, file_extension):
     """
     Only consider modified files with extension 'file_extension'
+    in a particular commit
     """
-    modified_files = [f for f in commit.modifications if file_extension in f.filename]
+    modified_files = [f for f in commit.modifications 
+                        if file_extension in f.filename]
     return modified_files
 
 def function_signature(method, params_dict):
     """
+    Returns the signature of the function which includes:
+    the name of the class the method belongs to, name of the method
+    and its parameters and their type 
     """
     return params_dict[method.name][1]         
 
 def fetch(commit, modified_files, existing_methods):
-    """
-    """
+
     current_methods = dict()
     data_to_add = list()
 
@@ -26,22 +30,21 @@ def fetch(commit, modified_files, existing_methods):
             current_methods[method.name] = (set(method.parameters), 
                                             method.long_name)
             
-            # checking if a new argument has been added to any method 
-            # by comparing the number of parameters in this commit
-            # vs previous commit and repeating it for all methods.
+            # Compare the number of parameters of existing methods 
+            # in this commit vs previous commit
             if method.name in existing_methods.keys():
                 num_of_prev_params = len(existing_methods[method.name][0])
                 num_of_curr_params = len(current_methods[method.name][0])
                 
                 if num_of_curr_params > num_of_prev_params:
                     
-                    # get function signatures
+                    # get function signatures and filename
+                    filename = modified_file.filename
                     old_signature = function_signature(method, existing_methods)
                     new_signature = function_signature(method, current_methods)
 
-                    t = [commit.hash, modified_file.filename, 
-                         old_signature, new_signature]
-                    data_to_add.append(t)
+                    entry = [commit.hash, filename, old_signature, new_signature]
+                    data_to_add.append(entry)
 
     return current_methods, data_to_add
 

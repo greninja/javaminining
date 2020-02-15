@@ -1,8 +1,6 @@
 # About
 
-This repository contains code for analyzing and fetching commits from a git repository that modify atleast one file by adding a new argument to an existing method. The file extension/type that needs to be analyzed can be passed as a command line argument, along with the local absolute path or remote github url of the git repository. The fetched commits are exported in a csv file.  
-
-This repo chiefly makes use of [PyDriller](https://pydriller.readthedocs.io/en/latest/intro.html), which is a python framework that helps developers with mining software repositories.
+This repository contains code for analyzing and fetching commits from a git repository that modify atleast one file by adding a new argument to an existing method. The file extension/type that needs to be analyzed can be passed as a command line argument, along with the local absolute path or remote github url of the git repository. The fetched commits are exported in a csv file. This repo chiefly makes use of [PyDriller](https://pydriller.readthedocs.io/en/latest/intro.html), which is a python framework that helps developers with mining software repositories.
 
 # Install prerequisites
 
