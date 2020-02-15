@@ -1,5 +1,0 @@
-Commit SHA,Java File,Old function signature,New function signature
-6fa7a2a1260e23f9d4c42d502345e47e3b0d3e4e,Calculator.java,"Calculator::calc( double x , String input , char opt)","Calculator::calc( double omega , double x , String input , char opt)"
-2a1501b82df808d57f139acb50170816a5d01120,Calculator.java,"Calculator::calc( double omega , double x , String input , char opt)","Calculator::calc( double omega , double x , String input , char opt , int y)"
-2a1501b82df808d57f139acb50170816a5d01120,Calculator.java,Calculator::onShowScientificMode(),Calculator::onShowScientificMode( char mode)
-86125dc60ff649c0aff03b853d51e9b433ba637c,Calculator.java,"Calculator::calc( double omega , double x , String input , char opt , int y)","Calculator::calc( double omega , double x , String input , char opt , int y , int z)"
