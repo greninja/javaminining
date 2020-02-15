@@ -1,0 +1,12 @@
+Commit SHA,Filename,Old function signature,New function signature
+f44cb0a9560d8cdf1b493ec711bae8e8e168e333,Manager.java,Manager::onclose(),Manager::onclose( String reason)
+b7f08059d7f7f6bceeb94d26c7d0033774dfa227,Connection.java,Connection::client(),Connection::client( IO . Options opts)
+d0039f79102f4bf3a5b9c11450a5e1ae32840278,SocketIOException.java,SocketIOException::SocketIOException( Throwable cause),"SocketIOException::SocketIOException( String message , Throwable cause)"
+f7810c19d37b310f19f89afecaea80765ab51f05,Connection.java,Connection::client( IO . Options opts),"Connection::client( String path , IO . Options opts)"
+4811368854a8599eac0bf798ce28fa262cce210f,Manager.java,Manager::socket( String nsp),"Manager::socket( String nsp , Options opts)"
+4811368854a8599eac0bf798ce28fa262cce210f,Socket.java,"Socket::Socket( Manager io , String nsp)","Socket::Socket( Manager io , String nsp , Manager . Options opts)"
+f6bb7678b6f249ead1811276e200a9778a0441e1,Manager.java,Manager::socket( String nsp),"Manager::socket( final String nsp , Options opts)"
+7279919ef96895893035f2db731baaca97afbc92,Manager.java,Manager::socket( String nsp),"Manager::socket( final String nsp , Options opts)"
+3d98ed9fe9c524fc7cf24235197b8ae3afb159a3,Manager.java,Manager::socket( String nsp),"Manager::socket( final String nsp , Options opts)"
+ad4449bfeeb2a3e7dd60db2301bf4691d0841cb7,Manager.java,Manager::socket( String nsp),"Manager::socket( final String nsp , Options opts)"
+eeadb50aa92bdb0a25b3c39b145b62d2cdd04ef0,Manager.java,Manager::socket( String nsp),"Manager::socket( final String nsp , Options opts)"
