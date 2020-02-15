@@ -4,6 +4,7 @@
 # (6) create a requirements.txt file for installation - NOT DONE
 # (4) scrap online github commit or from local git repo? NOT DONE
 
+import os
 from pydriller import RepositoryMining
 from arguments import parser
 from generate_csv import csv_report
@@ -91,6 +92,7 @@ def get_commits_in_CSV(args):
     
     # generate csv report
     csv_file = repo_path.split("/")[-1]+'.csv'
+    csv_file = os.path.join(os.getcwd(), 'csv_reports', csv_file)
     csv_report(csv_file, csv_data)
 
 if __name__=="__main__":

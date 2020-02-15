@@ -12,20 +12,20 @@ pip3 -r install requirements.txt
 ```
 
 # Run main script
-
-The main script used to retrieve the commits is `fetch_commits.py`. It requires two command line arguments:
+	
+The main script used to retrieve the commits is `src/fetch_commits.py`. It requires two command line arguments:
 
 - `file_extension`: commits including instances of adding arguments to an existing method within files with  `file_extension` will be fetched 
 - `repo_path`: absolute path of the git repository (fetching uses local git commit history)
 
 Format of the command to run `fetch_commits.py`:
 ```
-python3 fetch_commits.py --repo_path /path/to/git/repo --file_extension [.java, .py etc.]
+python3 src/fetch_commits.py --repo_path /path/to/git/repo --file_extension [.java, .py etc.]
 ```
 
 For eg:
 ```
-python3 fetch_commits.py --repo_path /home/shadab/sample-code-java --file_extension .java
+python3 src/fetch_commits.py --repo_path /home/shadab/sample-code-java --file_extension .java
 ```
 
 Eventually, there'll be a CSV file with same filename as that of the git repo.
