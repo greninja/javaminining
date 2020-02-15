@@ -1,0 +1,5 @@
+Commit SHA,Java File,Old function signature,New function signature
+6fa7a2a,Calculator.java,"private double Calculator::calc( double x , String input , char opt)","private double Calculator::calc( double omega , double x , String input , char opt)"
+2a1501b,Calculator.java,"private double Calculator::calc( double omega , double x , String input , char opt)","private double Calculator::calc( double omega , double x , String input , char opt , int y)"
+2a1501b,Calculator.java,private void Calculator::onShowScientificMode(),private void Calculator::onShowScientificMode( char mode)
+86125dc,Calculator.java,"private double Calculator::calc( double omega , double x , String input , char opt , int y)","private double Calculator::calc( double omega , double x , String input , char opt , int y , int z)"
