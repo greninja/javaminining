@@ -8,8 +8,8 @@ def get_modified_files(commit, file_extension):
     Only consider modified files with extension 'file_extension'
     in a particular commit
     """
-    modified_files = [f for f in commit.modifications 
-                        if file_extension in f.filename]
+    modified_files = [mod_file for mod_file in commit.modifications 
+                        if any(f in mod_file.filename for f in file_extension)]
     return modified_files
 
 def function_signature(method, params_dict):
@@ -18,7 +18,7 @@ def function_signature(method, params_dict):
     the name of the class the method belongs to, name of the method
     and its parameters and their type 
     """
-    return params_dict[method.name][1]         
+    return params_dict[method.name][1]
 
 def fetch(commit, modified_files, existing_methods):
 
@@ -54,13 +54,13 @@ def get_commits_in_CSV(args):
     from a given git repository into a csv file.
     """
     repo_path = args.repo_path
-    file_extension = args.file_extension
+    file_extension = args.file_extension.split(",") # to split if multiple extensions are passed
     existing_methods = dict()
     csv_data = list()
 
     for commit in RepositoryMining(repo_path, 
                     only_modifications_with_file_types=
-                    [file_extension]).traverse_commits():
+                    file_extension).traverse_commits():
         
         # fetch files with extension 'file_extension' that were modified 
         # in the current commit
