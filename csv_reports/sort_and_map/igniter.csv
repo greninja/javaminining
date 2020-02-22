@@ -1,0 +1,3 @@
+Commit SHA,Filename,Old function signature,New function signature,Overloaded
+432feab9db522155ed8a881c7fe170a92c4884e4,MainActivity.java,"MainActivity::getConfig( String remoteAddr , short remotePort , String password)","MainActivity::getConfig( String remoteAddr , short remotePort , String password , boolean verify)",No
+83f7724307bdeee2f28aa8c2caf7b298e89fa88e,MainActivity.java,"MainActivity::getConfig( String remoteAddr , int remotePort , String password , boolean verify)","MainActivity::getConfig( String remoteAddr , int remotePort , String password , boolean enableIpv6 , boolean verify)",No

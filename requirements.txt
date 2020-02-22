@@ -1,1 +1,2 @@
+numpy==1.17.3
 PyDriller==1.11

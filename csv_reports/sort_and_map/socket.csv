@@ -1,0 +1,4 @@
+Commit SHA,Filename,Old function signature,New function signature,Overloaded
+f44cb0a9560d8cdf1b493ec711bae8e8e168e333,Manager.java,Manager::onclose(),Manager::onclose( String reason),No
+4811368854a8599eac0bf798ce28fa262cce210f,Socket.java,"Socket::Socket( Manager io , String nsp)","Socket::Socket( Manager io , String nsp , Manager . Options opts)",No
+f6bb7678b6f249ead1811276e200a9778a0441e1,Manager.java,Manager::socket( String nsp),"Manager::socket( final String nsp , Options opts)",Yes

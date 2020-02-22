@@ -1,0 +1,10 @@
+Commit SHA,Filename,Old function signature,New function signature,Overloaded
+4cd20b1b0a9dd961d87552557cac85ecf17ecc06,IO.java,IO::socket( URI uri),"IO::socket( String uri , Options opts)",Yes
+f44cb0a9560d8cdf1b493ec711bae8e8e168e333,Manager.java,Manager::onclose(),Manager::onclose( String reason),No
+f44cb0a9560d8cdf1b493ec711bae8e8e168e333,Socket.java,"Socket::emit( final String event , final Object ... args)","Socket::emit( final String event , final Object [ ] args , final Ack ack)",Yes
+85591d23cd31f3869a3a06ffdab2f1c3a544dfb4,Socket.java,"Socket::emit( final String event , final Object ... args)","Socket::emit( final String event , final Object [ ] args , final Ack ack)",Yes
+b7f08059d7f7f6bceeb94d26c7d0033774dfa227,Connection.java,Connection::client(),Connection::client( IO . Options opts),Yes
+6ba581888428ac1ce4ec8972c2b3a1733ea6031e,Manager.java,Manager::reconnection(),Manager::reconnection( boolean v),Yes
+9d6947a015d06851e3cfdaf2397b80cefe161896,Manager.java,Manager::Manager(),"Manager::Manager( URI uri , Options opts)",Yes
+4811368854a8599eac0bf798ce28fa262cce210f,Manager.java,Manager::socket( String nsp),"Manager::socket( String nsp , Options opts)",Yes
+4811368854a8599eac0bf798ce28fa262cce210f,Socket.java,"Socket::Socket( Manager io , String nsp)","Socket::Socket( Manager io , String nsp , Manager . Options opts)",No
